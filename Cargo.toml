@@ -6,5 +6,8 @@ edition = "2021"
 [[bin]]
 name = "iterative_sha"
 
+[[bin]]
+name = "fibonacci"
+
 [dependencies]
 sha2 = "0.10.8"
