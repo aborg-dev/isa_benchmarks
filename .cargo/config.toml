@@ -1,0 +1,7 @@
+[target.riscv64gc-unknown-linux-gnu]
+linker = "riscv64-unknown-linux-gnu-gcc"
+runner = "qemu-riscv64"
+
+[target.aarch64-unknown-linux-gnu]
+linker = "aarch64-unknown-linux-gnu-gcc"
+runner = "qemu-aarch64"
