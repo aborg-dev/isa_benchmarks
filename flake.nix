@@ -20,15 +20,6 @@
             riscv64-pkgs.buildPackages.buildPackages.qemu
             aarch64-pkgs.buildPackages.gcc
             aarch64-pkgs.buildPackages.buildPackages.qemu
-            # Qemu deps.
-            # pkgs.pcre2
-            # pkgs.gnutls
-            # pkgs.libxkbcommon
-            # pkgs.elfutils
-            # pkgs.zstd
-            # pkgs.libnfs
-            # pkgs.libssh
-            # pkgs.curl
           ];
         };
       });
