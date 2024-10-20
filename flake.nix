@@ -13,6 +13,7 @@
         pkgs = import nixpkgs { inherit system; };
         riscv64-pkgs = pkgs.pkgsCross.riscv64;
         aarch64-pkgs = pkgs.pkgsCross.aarch64-multiplatform;
+        gnu32-pkgs = pkgs.pkgsCross.gnu32;
       in {
         devShells.default = pkgs.mkShell {
           packages = [
@@ -20,6 +21,8 @@
             riscv64-pkgs.buildPackages.buildPackages.qemu
             aarch64-pkgs.buildPackages.gcc
             aarch64-pkgs.buildPackages.buildPackages.qemu
+            gnu32-pkgs.buildPackages.gcc
+            gnu32-pkgs.buildPackages.buildPackages.qemu
           ];
         };
       });
