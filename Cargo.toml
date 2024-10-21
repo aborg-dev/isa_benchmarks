@@ -4,7 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "iterative_sha"
+name = "iter_sha"
+
+[[bin]]
+name = "iter_keccak"
 
 [[bin]]
 name = "fibonacci"
