@@ -1,0 +1,15 @@
+cargo build --bin iter_sha --target x86_64-unknown-linux-gnu --release
+    Finished `release` profile [optimized] target(s) in 0.03s
+cargo build --bin iter_sha --target riscv64gc-unknown-linux-gnu --release
+    Finished `release` profile [optimized] target(s) in 0.00s
+cargo build --bin iter_sha --target aarch64-unknown-linux-gnu --release
+    Finished `release` profile [optimized] target(s) in 0.02s
+qemu-x86_64 -plugin /home/polygon/repos/qemu/build/tests/tcg/plugins/libinsn.so -d plugin target/x86_64-unknown-linux-gnu/release/iter_sha
+cpu 0 insns: 2569565
+total insns: 2569565
+qemu-riscv64 -plugin /home/polygon/repos/qemu/build/tests/tcg/plugins/libinsn.so -d plugin target/riscv64gc-unknown-linux-gnu/release/iter_sha
+cpu 0 insns: 42894630
+total insns: 42894630
+qemu-aarch64 -plugin /home/polygon/repos/qemu/build/tests/tcg/plugins/libinsn.so -d plugin target/aarch64-unknown-linux-gnu/release/iter_sha
+cpu 0 insns: 20084604
+total insns: 20084604

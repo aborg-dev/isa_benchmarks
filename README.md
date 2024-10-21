@@ -29,7 +29,7 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 |------|---------|
 |x86_64| 2569565|
 |riscv64| 42894630|
-|aarch64| 42894630|
+|aarch64| 20084604|
 
 ### Iterative Keccak
 
