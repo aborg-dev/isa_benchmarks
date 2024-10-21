@@ -9,6 +9,7 @@ nix develop
 just run fibonacci
 just run iter_sha
 just run iter_keccak
+just run eth_block
 ```
 
 ## Results
@@ -38,3 +39,11 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 |x86_64| 62359535|
 |riscv64| 67244706|
 |aarch64| 39524653|
+
+### Ethereum block
+
+|Target|Intructions|
+|------|---------|
+|x86_64| 255674553|
+|riscv64|320867198|
+|aarch64|191864567|
