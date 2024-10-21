@@ -17,6 +17,7 @@
       in {
         devShells.default = pkgs.mkShell {
           packages = [
+            pkgs.just
             riscv64-pkgs.buildPackages.gcc
             riscv64-pkgs.buildPackages.buildPackages.qemu
             aarch64-pkgs.buildPackages.gcc
