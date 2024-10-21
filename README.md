@@ -6,6 +6,6 @@ Measuring the instruction count of different ISAs.
 
 ```
 nix develop
-just bench fibonacci
-just bench iterative_sha
+just run fibonacci
+just run iterative_sha
 ```
