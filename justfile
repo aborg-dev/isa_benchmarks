@@ -1,4 +1,4 @@
-plugins := "-plugin /home/polygon/repos/qemu/build/tests/tcg/plugins/libinsn.so -d plugin"
+plugins := "-plugin deps/libinsn.so -d plugin"
 
 build benchmark:
   @echo "Building {{benchmark}}"

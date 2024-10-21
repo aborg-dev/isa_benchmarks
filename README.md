@@ -12,6 +12,8 @@ just run iter_keccak
 just run eth_block
 ```
 
+For now, the instruction measurement only works on x86 Linux due to a binary dependency on the QEMU plugin.
+
 ## Results
 
 Here are the measurements of the number of QEMU instructions per benchmark and target:
