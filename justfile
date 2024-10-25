@@ -29,7 +29,7 @@ run-aarch64 benchmark: build-aarch64
 
 run-wasm32 benchmark: build-wasm
   mkdir -p target/w2c2/{{benchmark}}
-  cp target/wasm32-wasip1/release/{{benchmark}}.wasm target/w2c2/{{benchmark}}/module.wasm
+  wasm-opt -O -o target/w2c2/{{benchmark}}/module.wasm target/wasm32-wasip1/release/{{benchmark}}.wasm
   cp wasm/Makefile target/w2c2/{{benchmark}}
   cp wasm/main.c target/w2c2/{{benchmark}}
   (cd target/w2c2/{{benchmark}} && make)

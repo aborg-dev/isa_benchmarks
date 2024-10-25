@@ -56,4 +56,4 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 |riscv64|320867198|
 |aarch64|191864567|
 |wasm32+clang|410921688|
-|wasm32+zig|252889282|
+|wasm32+zig|376863421|
