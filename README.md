@@ -22,10 +22,10 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 
 |Target|Intructions|
 |------|---------|
-|x86_64| 1535423|
+|x86_64|  1535423|
 |riscv64| 5277796|
 |aarch64| 5212439|
-|wasm32|  1467037|
+|wasm32|  1318539|
 
 ### Iterative SHA
 
@@ -34,7 +34,7 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 |x86_64 |  2569565|
 |riscv64| 42894630|
 |aarch64| 20084604|
-|wasm32 | 38522616|
+|wasm32 | 37244819|
 
 ### Iterative Keccak
 
@@ -43,7 +43,7 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 |x86_64 | 62359535|
 |riscv64| 67244706|
 |aarch64| 39524653|
-|wasm32 | 76132781|
+|wasm32 | 67784936|
 
 ### Ethereum block
 
@@ -52,4 +52,4 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 |x86_64| 255674553|
 |riscv64|320867198|
 |aarch64|191864567|
-|wasm32 |456809856|
+|wasm32 |410915034|
