@@ -9,7 +9,7 @@ build-riscv64 $RUSTFLAGS="-C target-feature=+zknh":
 build-aarch64 $RUSTFLAGS="-C target-feature=-sha3,-sve2-sha3":
   cargo build --target aarch64-unknown-linux-gnu --release
 
-build-wasm:
+build-wasm32:
   cargo build --target wasm32-wasip1 --release
 
 run benchmark: \
@@ -27,7 +27,7 @@ run-riscv64 benchmark: build-riscv64
 run-aarch64 benchmark: build-aarch64
   qemu-aarch64 {{plugins}} target/aarch64-unknown-linux-gnu/release/{{benchmark}}
 
-run-wasm32 benchmark: build-wasm
+run-wasm32 benchmark: build-wasm32
   mkdir -p target/w2c2/{{benchmark}}
   wasm-opt -O -o target/w2c2/{{benchmark}}/module.wasm target/wasm32-wasip1/release/{{benchmark}}.wasm
   cp wasm/Makefile target/w2c2/{{benchmark}}
