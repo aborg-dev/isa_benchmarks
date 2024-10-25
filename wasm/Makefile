@@ -2,6 +2,7 @@ W2C2 := /home/polygon/repos/w2c2
 LDFLAGS += -lm -L${W2C2}/wasi/build -lw2c2wasi
 CFLAGS += -O3
 W2C2_BIN := ${W2C2}/build/w2c2/w2c2
+CC := clang
 
 module: module.o main.o
 	$(CC) $^ -O2 -o module $(LDFLAGS)
