@@ -12,8 +12,12 @@ name = "iter_keccak"
 [[bin]]
 name = "fibonacci"
 
+[[bin]]
+name = "eth_block"
+
 [dependencies]
 sha2 = "0.10.8"
 sha3 = "0.10.8"
 bincode = "1.3.3"
-rsp-client-executor ={ git = "https://github.com/succinctlabs/rsp.git" }
+# rsp-client-executor = { git = "https://github.com/succinctlabs/rsp.git" }
+rsp-client-executor = { git = "https://github.com/aborg-dev/rsp.git" }
