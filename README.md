@@ -17,6 +17,13 @@ For now, the instruction measurement only works on x86 Linux due to a binary dep
 ## Results
 
 Here are the measurements of the number of QEMU instructions per benchmark and target:
+- x86_64: Rustc to `x86_64-unknown-linux-gnu` with -sha,-ssse3,-sse4.1,-avx2
+- risc64: Rustc to `riscv64gc-unknown-linux-gnu` with +zknh
+- aarch64: Rustc to `aarch64-unknown-linux-gnu` with -sha3,-sve2-sha3
+- wasm32+clang: Rustc to `wasm32-wasip1`, then w2c2 to C, then Clang to x86_64
+- wasm32+zig:   Rustc to `wasm32-wasip1`, then w2c2 to C, then Zig to x86_64
+- wasm32+eval:  Rustc to `wasm32-wasip1`, then run Wasmer interpreter with cost 1 for each WASM instruction
+- wasm32+costs: As `wasm32-eval`, but `get_local`, `const.i32` and `const.i64` are free
 
 ### Fibonacci
 
@@ -28,6 +35,7 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 |wasm32+clang| 1318539   |
 |wasm32+zig  | 1535433   |
 |wasm32+eval | 4004505   |
+|wasm32+costs| 2627620  |
 
 ### Iterative SHA
 
@@ -39,6 +47,7 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 |wasm32+clang| 37244819  |
 |wasm32+zig  | 30914079  |
 |wasm32+eval | 55683326  |
+|wasm32+costs| 29299932  |
 
 ### Iterative Keccak
 
@@ -50,6 +59,7 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 |wasm32+clang| 67784936  |
 |wasm32+zig  | 50354196  |
 |wasm32+eval |105243525  |
+|wasm32+costs| 58350048  |
 
 
 ### Ethereum block
@@ -62,3 +72,4 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 |wasm32+clang| 410921688 |
 |wasm32+zig  | 376863421 |
 |wasm32+eval | 607824971 |
+|wasm32+costs| 343618601 |

@@ -38,8 +38,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // that it received as it first argument.
     let cost_function = |operator: &Operator| -> u64 {
         match operator {
-            // Operator::LocalGet { .. } | Operator::I32Const { .. } => 1,
-            // Operator::I32Add { .. } => 2,
+            Operator::LocalGet { .. } | Operator::I32Const { .. } | Operator::I64Const { .. } => 0,
             _ => 1,
         }
     };
