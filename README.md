@@ -44,7 +44,7 @@ The folder `reports/` contains detailed breakdown of WASM instructions for each 
 |wasm32+clang| 1318539   |
 |wasm32+zig  | 1535433   |
 |wasm32+eval | 4004505   |
-|wasm32+costs| 2627620  |
+|wasm32+costs| 1626717  |
 
 ### Iterative SHA
 
@@ -56,7 +56,7 @@ The folder `reports/` contains detailed breakdown of WASM instructions for each 
 |wasm32+clang| 37244819  |
 |wasm32+zig  | 30914079  |
 |wasm32+eval | 55683326  |
-|wasm32+costs| 29299932  |
+|wasm32+costs| 25103699  |
 
 ### Iterative Keccak
 
@@ -68,7 +68,7 @@ The folder `reports/` contains detailed breakdown of WASM instructions for each 
 |wasm32+clang| 67784936  |
 |wasm32+zig  | 50354196  |
 |wasm32+eval |105243525  |
-|wasm32+costs| 58350048  |
+|wasm32+costs| 39223788  |
 
 
 ### Ethereum block
@@ -81,4 +81,4 @@ The folder `reports/` contains detailed breakdown of WASM instructions for each 
 |wasm32+clang| 410921688 |
 |wasm32+zig  | 376863421 |
 |wasm32+eval | 607824971 |
-|wasm32+costs| 343618601 |
+|wasm32+costs| 237136572 |

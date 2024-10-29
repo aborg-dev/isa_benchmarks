@@ -1,62 +1,62 @@
-local.get       :  32988802
-i64.xor         :  24410000
-i64.const       :  12970056
-local.tee       :  11051461
-i64.rotl        :   6960000
-local.set       :   6751537
-i64.and         :   6000000
-i64.load        :    950008
-i32.const       :    934619
-i32.add         :    722091
-i64.store       :    540021
-br_unless       :    322507
-br              :    261496
-return          :     70508
-drop_keep       :     70501
-call            :     70402
-alloca          :     60464
-i32.load        :     41112
-i32.store       :     40506
-i32.store8      :     40328
-drop            :     40108
-i32.gt_u        :     30284
-i32.lt_u        :     30254
-memory.fill     :     30000
-i32.eqz         :     20676
-memory.copy     :     20000
-i32.sub         :     10598
-i32.load8_u     :     10524
-i32.shl         :     10035
-i32.or          :     10029
-i64.add         :     10001
-i64.eqz         :     10001
-i32.and         :      1084
-global.set      :       442
-i32.eq          :       263
-global.get      :       223
-i32.ne          :       185
-select          :       174
-i32.le_u        :       107
-call_indirect   :       105
-i32.mul         :        91
-i32.ge_u        :        72
-i32.wrap_i64    :        55
-i32.store16     :        35
-i32.load16_u    :        35
-i64.ge_u        :        33
-i64.load8_u     :        32
-i32.div_u       :        22
-i64.eq          :         4
-i64.extend_i32_u:         4
-i64.shl         :         2
-i64.or          :         2
-i32.shr_u       :         2
-i64.ne          :         2
-i64.gt_u        :         1
-i64.mul         :         1
-i32.xor         :         1
-i64.sub         :         1
-catch_drop      :         1
-br_table        :         1
-i64.div_u       :         1
-Total count: 105491910
+Total: 105491910
+local.get       :  32988802, 31.271%
+i64.xor         :  24410000, 23.139%
+i64.const       :  12970056, 12.295%
+local.tee       :  11051461, 10.476%
+i64.rotl        :   6960000,  6.598%
+local.set       :   6751537,  6.400%
+i64.and         :   6000000,  5.688%
+i64.load        :    950008,  0.901%
+i32.const       :    934619,  0.886%
+i32.add         :    722091,  0.684%
+i64.store       :    540021,  0.512%
+br_unless       :    322507,  0.306%
+br              :    261496,  0.248%
+return          :     70508,  0.067%
+drop_keep       :     70501,  0.067%
+call            :     70402,  0.067%
+alloca          :     60464,  0.057%
+i32.load        :     41112,  0.039%
+i32.store       :     40506,  0.038%
+i32.store8      :     40328,  0.038%
+drop            :     40108,  0.038%
+i32.gt_u        :     30284,  0.029%
+i32.lt_u        :     30254,  0.029%
+memory.fill     :     30000,  0.028%
+i32.eqz         :     20676,  0.020%
+memory.copy     :     20000,  0.019%
+i32.sub         :     10598,  0.010%
+i32.load8_u     :     10524,  0.010%
+i32.shl         :     10035,  0.010%
+i32.or          :     10029,  0.010%
+i64.add         :     10001,  0.009%
+i64.eqz         :     10001,  0.009%
+i32.and         :      1084,  0.001%
+global.set      :       442,  0.000%
+i32.eq          :       263,  0.000%
+global.get      :       223,  0.000%
+i32.ne          :       185,  0.000%
+select          :       174,  0.000%
+i32.le_u        :       107,  0.000%
+call_indirect   :       105,  0.000%
+i32.mul         :        91,  0.000%
+i32.ge_u        :        72,  0.000%
+i32.wrap_i64    :        55,  0.000%
+i32.load16_u    :        35,  0.000%
+i32.store16     :        35,  0.000%
+i64.ge_u        :        33,  0.000%
+i64.load8_u     :        32,  0.000%
+i32.div_u       :        22,  0.000%
+i64.eq          :         4,  0.000%
+i64.extend_i32_u:         4,  0.000%
+i64.ne          :         2,  0.000%
+i32.shr_u       :         2,  0.000%
+i64.or          :         2,  0.000%
+i64.shl         :         2,  0.000%
+i64.mul         :         1,  0.000%
+i64.div_u       :         1,  0.000%
+br_table        :         1,  0.000%
+i64.gt_u        :         1,  0.000%
+i32.xor         :         1,  0.000%
+catch_drop      :         1,  0.000%
+i64.sub         :         1,  0.000%

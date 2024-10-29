@@ -33,10 +33,12 @@ fn main() {
     pairs.sort_by(|a, b| b.1.cmp(&a.1));
 
     // Print the sorted pairs
-    let mut total_count = 0;
+    let total_count: u64 = pairs.iter().map(|(_, count)| *count).sum();
+    println!("Total: {total_count}");
     for (instruction, count) in pairs {
-        println!("{instruction:16}: {count:9}");
-        total_count += count;
+        println!(
+            "{instruction:16}: {count:9}, {:6.3}%",
+            100.0 * count as f32 / total_count as f32
+        );
     }
-    println!("Total count: {total_count}");
 }

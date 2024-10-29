@@ -39,3 +39,4 @@ run-wasm32-trace benchmark: #(build-wasm32 benchmark)
   cargo build --release --bin parse_trace
   deps/wasm-interp --wasi --enable-threads --trace target/wasm32-wasip1/release/{{benchmark}}.wasm | \
     ./target/release/parse_trace > reports/{{benchmark}}.txt
+  python scripts/weighted_cost.py reports/{{benchmark}}.txt

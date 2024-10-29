@@ -1,58 +1,58 @@
-local.get       :   1251110
-i64.add         :   1125008
-local.tee       :   1000234
-br_unless       :    125277
-local.set       :    125187
-br              :    125159
-i32.eqz         :    125069
-i64.const       :    125052
-i64.eqz         :    125001
-i32.const       :       723
-i32.add         :       333
-i32.store       :       154
-i32.load        :       126
-i32.and         :       103
-i32.sub         :        73
-return          :        61
-global.set      :        58
-drop_keep       :        54
-call            :        51
-alloca          :        48
-i32.load8_u     :        47
-i32.store8      :        36
-i32.lt_u        :        31
-global.get      :        31
-i32.gt_u        :        28
-i32.ne          :        26
-i32.eq          :        25
-i64.store       :        19
-i32.load16_u    :        15
-select          :        15
-i32.store16     :        15
-i32.le_u        :        14
-i32.shl         :        14
-i32.mul         :        12
-drop            :        12
-i32.or          :        10
-i64.load        :        10
-i32.wrap_i64    :         9
-i64.ne          :         9
-i32.xor         :         9
-call_indirect   :         9
-i32.ge_u        :         8
-i32.div_u       :         7
-i64.mul         :         5
-i64.gt_u        :         5
-i64.sub         :         5
-i64.div_u       :         5
-i64.eq          :         4
-i64.ge_u        :         3
-i64.extend_i32_u:         3
-i32.shr_u       :         2
-i64.or          :         2
-i64.and         :         2
-br_table        :         1
-i64.shl         :         1
-call_import     :         1
-catch_drop      :         1
-Total count: 4129332
+Total: 4129332
+local.get       :   1251110, 30.298%
+i64.add         :   1125008, 27.244%
+local.tee       :   1000234, 24.223%
+br_unless       :    125277,  3.034%
+local.set       :    125187,  3.032%
+br              :    125159,  3.031%
+i32.eqz         :    125069,  3.029%
+i64.const       :    125052,  3.028%
+i64.eqz         :    125001,  3.027%
+i32.const       :       723,  0.018%
+i32.add         :       333,  0.008%
+i32.store       :       154,  0.004%
+i32.load        :       126,  0.003%
+i32.and         :       103,  0.002%
+i32.sub         :        73,  0.002%
+return          :        61,  0.001%
+global.set      :        58,  0.001%
+drop_keep       :        54,  0.001%
+call            :        51,  0.001%
+alloca          :        48,  0.001%
+i32.load8_u     :        47,  0.001%
+i32.store8      :        36,  0.001%
+global.get      :        31,  0.001%
+i32.lt_u        :        31,  0.001%
+i32.gt_u        :        28,  0.001%
+i32.ne          :        26,  0.001%
+i32.eq          :        25,  0.001%
+i64.store       :        19,  0.000%
+select          :        15,  0.000%
+i32.load16_u    :        15,  0.000%
+i32.store16     :        15,  0.000%
+i32.shl         :        14,  0.000%
+i32.le_u        :        14,  0.000%
+i32.mul         :        12,  0.000%
+drop            :        12,  0.000%
+i64.load        :        10,  0.000%
+i32.or          :        10,  0.000%
+call_indirect   :         9,  0.000%
+i32.xor         :         9,  0.000%
+i32.wrap_i64    :         9,  0.000%
+i64.ne          :         9,  0.000%
+i32.ge_u        :         8,  0.000%
+i32.div_u       :         7,  0.000%
+i64.mul         :         5,  0.000%
+i64.div_u       :         5,  0.000%
+i64.gt_u        :         5,  0.000%
+i64.sub         :         5,  0.000%
+i64.eq          :         4,  0.000%
+i64.extend_i32_u:         3,  0.000%
+i64.ge_u        :         3,  0.000%
+i64.and         :         2,  0.000%
+i32.shr_u       :         2,  0.000%
+i64.or          :         2,  0.000%
+i64.shl         :         1,  0.000%
+catch_drop      :         1,  0.000%
+call_import     :         1,  0.000%
+br_table        :         1,  0.000%
