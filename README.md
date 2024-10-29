@@ -14,6 +14,13 @@ just run eth_block
 
 For now, the instruction measurement only works on x86 Linux due to a binary dependency on the QEMU plugin.
 
+To generate detailed breakdown of WASM instructions use:
+```
+just run-wasm32-trace eth_block
+```
+
+For now, WASM tracing only works on x86 Linux due to a binary dependency on patched wasm-interp.
+
 ## Results
 
 Here are the measurements of the number of QEMU instructions per benchmark and target:
@@ -24,6 +31,8 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 - wasm32+zig:   Rustc to `wasm32-wasip1`, then w2c2 to C, then Zig to x86_64
 - wasm32+eval:  Rustc to `wasm32-wasip1`, then run Wasmer interpreter with cost 1 for each WASM instruction
 - wasm32+costs: As `wasm32-eval`, but `get_local`, `const.i32` and `const.i64` are free
+
+The folder `reports/` contains detailed breakdown of WASM instructions for each benchmark.
 
 ### Fibonacci
 
