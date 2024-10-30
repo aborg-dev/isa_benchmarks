@@ -30,9 +30,9 @@ Here are the measurements of the number of QEMU instructions per benchmark and t
 - wasm32+clang: Rustc to `wasm32-wasip1`, then w2c2 to C, then Clang to x86_64
 - wasm32+zig:   Rustc to `wasm32-wasip1`, then w2c2 to C, then Zig to x86_64
 - wasm32+eval:  Rustc to `wasm32-wasip1`, then run Wasmer interpreter with cost 1 for each WASM instruction
-- wasm32+costs: As `wasm32-eval`, but `get_local`, `const.i32` and `const.i64` are free
+- wasm32+costs: As `wasm32-eval`, but variable and memory reads and writes are free
 
-The folder `reports/` contains detailed breakdown of WASM instructions for each benchmark.
+The folder `reports/wasm/` contains detailed breakdown of WASM instructions for each benchmark.
 
 ### Fibonacci
 

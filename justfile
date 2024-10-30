@@ -1,4 +1,5 @@
 plugins := "-plugin deps/libinsn.so -d plugin"
+trace_plugins := "-plugin deps/libexeclog.so -d plugin"
 
 build-x86_64 benchmark $RUSTFLAGS="-C target-feature=-sha,-ssse3,-sse4.1,-avx2":
   cargo build --target x86_64-unknown-linux-gnu --release --bin {{benchmark}}
@@ -11,6 +12,9 @@ build-aarch64 benchmark $RUSTFLAGS="-C target-feature=-sha3,-sve2-sha3":
 
 build-wasm32 benchmark:
   cargo build --target wasm32-wasip1 --release --bin {{benchmark}}
+
+build-parse-trace:
+  cargo build --release --bin parse_trace
 
 run benchmark: \
   (run-x86_64 benchmark) \
@@ -35,8 +39,12 @@ run-wasm32 benchmark: (build-wasm32 benchmark)
   (cd target/w2c2/{{benchmark}} && make)
   qemu-x86_64 {{plugins}} target/w2c2/{{benchmark}}/module
 
-run-wasm32-trace benchmark: #(build-wasm32 benchmark)
+run-wasm32-trace benchmark: (build-wasm32 benchmark) build-parse-trace
   cargo build --release --bin parse_trace
   deps/wasm-interp --wasi --enable-threads --trace target/wasm32-wasip1/release/{{benchmark}}.wasm | \
-    ./target/release/parse_trace > reports/{{benchmark}}.txt
+    ./target/release/parse_trace wasm > reports/wasm/{{benchmark}}.txt
   python scripts/weighted_cost.py reports/{{benchmark}}.txt
+
+run-riscv64-trace benchmark: (build-riscv64 benchmark) build-parse-trace
+  qemu-riscv64 {{trace_plugins}} target/riscv64gc-unknown-linux-gnu/release/{{benchmark}} 2>&1 | \
+    ./target/release/parse_trace qemu > reports/riscv64/{{benchmark}}.txt

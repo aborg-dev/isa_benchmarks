@@ -23,3 +23,4 @@ sha2 = "0.10.8"
 sha3 = "0.10.8"
 bincode = "1.3.3"
 rsp-client-executor = { git = "https://github.com/aborg-dev/rsp.git" }
+clap = { version = "4.5.20", features = ["derive"] }
